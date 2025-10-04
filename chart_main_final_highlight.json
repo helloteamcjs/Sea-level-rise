@@ -1,0 +1,918 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": "container",
+  "background": "transparent",
+  "data": {
+    "values": [
+      {
+        "Year": 1993,
+        "Temp_Anomaly_C": 0.23,
+        "Sea_Level_mm": -27.78,
+        "type": "실측"
+      },
+      {
+        "Year": 1994,
+        "Temp_Anomaly_C": 0.31,
+        "Sea_Level_mm": -26.5,
+        "type": "실측"
+      },
+      {
+        "Year": 1995,
+        "Temp_Anomaly_C": 0.44,
+        "Sea_Level_mm": -23.52,
+        "type": "실측"
+      },
+      {
+        "Year": 1996,
+        "Temp_Anomaly_C": 0.33,
+        "Sea_Level_mm": -17.93,
+        "type": "실측"
+      },
+      {
+        "Year": 1997,
+        "Temp_Anomaly_C": 0.46,
+        "Sea_Level_mm": -13.2,
+        "type": "실측"
+      },
+      {
+        "Year": 1998,
+        "Temp_Anomaly_C": 0.63,
+        "Sea_Level_mm": -8.67,
+        "type": "실측"
+      },
+      {
+        "Year": 1999,
+        "Temp_Anomaly_C": 0.43,
+        "Sea_Level_mm": -4.26,
+        "type": "실측"
+      },
+      {
+        "Year": 2000,
+        "Temp_Anomaly_C": 0.43,
+        "Sea_Level_mm": -2.16,
+        "type": "실측"
+      },
+      {
+        "Year": 2001,
+        "Temp_Anomaly_C": 0.53,
+        "Sea_Level_mm": 1.71,
+        "type": "실측"
+      },
+      {
+        "Year": 2002,
+        "Temp_Anomaly_C": 0.7,
+        "Sea_Level_mm": 5.44,
+        "type": "실측"
+      },
+      {
+        "Year": 2003,
+        "Temp_Anomaly_C": 0.67,
+        "Sea_Level_mm": 9.42,
+        "type": "실측"
+      },
+      {
+        "Year": 2004,
+        "Temp_Anomaly_C": 0.58,
+        "Sea_Level_mm": 12.4,
+        "type": "실측"
+      },
+      {
+        "Year": 2005,
+        "Temp_Anomaly_C": 0.75,
+        "Sea_Level_mm": 16.59,
+        "type": "실측"
+      },
+      {
+        "Year": 2006,
+        "Temp_Anomaly_C": 0.67,
+        "Sea_Level_mm": 20.35,
+        "type": "실측"
+      },
+      {
+        "Year": 2007,
+        "Temp_Anomaly_C": 0.64,
+        "Sea_Level_mm": 25.1,
+        "type": "실측"
+      },
+      {
+        "Year": 2008,
+        "Temp_Anomaly_C": 0.54,
+        "Sea_Level_mm": 27.97,
+        "type": "실측"
+      },
+      {
+        "Year": 2009,
+        "Temp_Anomaly_C": 0.65,
+        "Sea_Level_mm": 30.57,
+        "type": "실측"
+      },
+      {
+        "Year": 2010,
+        "Temp_Anomaly_C": 0.72,
+        "Sea_Level_mm": 35.54,
+        "type": "실측"
+      },
+      {
+        "Year": 2011,
+        "Temp_Anomaly_C": 0.61,
+        "Sea_Level_mm": 34.03,
+        "type": "실측"
+      },
+      {
+        "Year": 2012,
+        "Temp_Anomaly_C": 0.64,
+        "Sea_Level_mm": 36.35,
+        "type": "실측"
+      },
+      {
+        "Year": 2013,
+        "Temp_Anomaly_C": 0.68,
+        "Sea_Level_mm": 39.87,
+        "type": "실측"
+      },
+      {
+        "Year": 2014,
+        "Temp_Anomaly_C": 0.76,
+        "Sea_Level_mm": 46.52,
+        "type": "실측"
+      },
+      {
+        "Year": 2015,
+        "Temp_Anomaly_C": 0.89,
+        "Sea_Level_mm": 51.48,
+        "type": "실측"
+      },
+      {
+        "Year": 2016,
+        "Temp_Anomaly_C": 1.01,
+        "Sea_Level_mm": 56.15,
+        "type": "실측"
+      },
+      {
+        "Year": 2017,
+        "Temp_Anomaly_C": 0.92,
+        "Sea_Level_mm": 58.75,
+        "type": "실측"
+      },
+      {
+        "Year": 2018,
+        "Temp_Anomaly_C": 0.84,
+        "Sea_Level_mm": 61.28,
+        "type": "실측"
+      },
+      {
+        "Year": 2019,
+        "Temp_Anomaly_C": 0.99,
+        "Sea_Level_mm": 67.29,
+        "type": "실측"
+      },
+      {
+        "Year": 2020,
+        "Temp_Anomaly_C": 1.01,
+        "Sea_Level_mm": 70.78,
+        "type": "실측"
+      },
+      {
+        "Year": 2021,
+        "Temp_Anomaly_C": 1.03,
+        "Sea_Level_mm": 74.37,
+        "type": "예측"
+      },
+      {
+        "Year": 2022,
+        "Temp_Anomaly_C": 1.05,
+        "Sea_Level_mm": 77.95,
+        "type": "예측"
+      },
+      {
+        "Year": 2023,
+        "Temp_Anomaly_C": 1.07,
+        "Sea_Level_mm": 81.53,
+        "type": "예측"
+      },
+      {
+        "Year": 2024,
+        "Temp_Anomaly_C": 1.09,
+        "Sea_Level_mm": 85.11,
+        "type": "예측"
+      },
+      {
+        "Year": 2025,
+        "Temp_Anomaly_C": 1.1,
+        "Sea_Level_mm": 88.69,
+        "type": "예측"
+      },
+      {
+        "Year": 2026,
+        "Temp_Anomaly_C": 1.12,
+        "Sea_Level_mm": 92.27,
+        "type": "예측"
+      },
+      {
+        "Year": 2027,
+        "Temp_Anomaly_C": 1.14,
+        "Sea_Level_mm": 95.85,
+        "type": "예측"
+      },
+      {
+        "Year": 2028,
+        "Temp_Anomaly_C": 1.16,
+        "Sea_Level_mm": 99.43,
+        "type": "예측"
+      },
+      {
+        "Year": 2029,
+        "Temp_Anomaly_C": 1.18,
+        "Sea_Level_mm": 103.01,
+        "type": "예측"
+      },
+      {
+        "Year": 2030,
+        "Temp_Anomaly_C": 1.2,
+        "Sea_Level_mm": 105.71,
+        "type": "예측"
+      },
+      {
+        "Year": 2031,
+        "Temp_Anomaly_C": 1.22,
+        "Sea_Level_mm": 109.29,
+        "type": "예측"
+      },
+      {
+        "Year": 2032,
+        "Temp_Anomaly_C": 1.24,
+        "Sea_Level_mm": 112.87,
+        "type": "예측"
+      },
+      {
+        "Year": 2033,
+        "Temp_Anomaly_C": 1.26,
+        "Sea_Level_mm": 116.45,
+        "type": "예측"
+      },
+      {
+        "Year": 2034,
+        "Temp_Anomaly_C": 1.27,
+        "Sea_Level_mm": 120.03,
+        "type": "예측"
+      },
+      {
+        "Year": 2035,
+        "Temp_Anomaly_C": 1.29,
+        "Sea_Level_mm": 123.61,
+        "type": "예측"
+      },
+      {
+        "Year": 2036,
+        "Temp_Anomaly_C": 1.31,
+        "Sea_Level_mm": 127.19,
+        "type": "예측"
+      },
+      {
+        "Year": 2037,
+        "Temp_Anomaly_C": 1.33,
+        "Sea_Level_mm": 130.77,
+        "type": "예측"
+      },
+      {
+        "Year": 2038,
+        "Temp_Anomaly_C": 1.35,
+        "Sea_Level_mm": 134.35,
+        "type": "예측"
+      },
+      {
+        "Year": 2039,
+        "Temp_Anomaly_C": 1.37,
+        "Sea_Level_mm": 137.93,
+        "type": "예측"
+      },
+      {
+        "Year": 2040,
+        "Temp_Anomaly_C": 1.39,
+        "Sea_Level_mm": 141.51,
+        "type": "예측"
+      },
+      {
+        "Year": 2041,
+        "Temp_Anomaly_C": 1.41,
+        "Sea_Level_mm": 145.09,
+        "type": "예측"
+      },
+      {
+        "Year": 2042,
+        "Temp_Anomaly_C": 1.43,
+        "Sea_Level_mm": 148.67,
+        "type": "예측"
+      },
+      {
+        "Year": 2043,
+        "Temp_Anomaly_C": 1.45,
+        "Sea_Level_mm": 152.25,
+        "type": "예측"
+      },
+      {
+        "Year": 2044,
+        "Temp_Anomaly_C": 1.47,
+        "Sea_Level_mm": 155.83,
+        "type": "예측"
+      },
+      {
+        "Year": 2045,
+        "Temp_Anomaly_C": 1.48,
+        "Sea_Level_mm": 159.41,
+        "type": "예측"
+      },
+      {
+        "Year": 2046,
+        "Temp_Anomaly_C": 1.5,
+        "Sea_Level_mm": 162.99,
+        "type": "예측"
+      },
+      {
+        "Year": 2047,
+        "Temp_Anomaly_C": 1.52,
+        "Sea_Level_mm": 166.57,
+        "type": "예측"
+      },
+      {
+        "Year": 2048,
+        "Temp_Anomaly_C": 1.54,
+        "Sea_Level_mm": 170.15,
+        "type": "예측"
+      },
+      {
+        "Year": 2049,
+        "Temp_Anomaly_C": 1.56,
+        "Sea_Level_mm": 173.73,
+        "type": "예측"
+      },
+      {
+        "Year": 2050,
+        "Temp_Anomaly_C": 1.58,
+        "Sea_Level_mm": 177.31,
+        "type": "예측"
+      },
+      {
+        "Year": 2051,
+        "Temp_Anomaly_C": 1.6,
+        "Sea_Level_mm": 180.89,
+        "type": "예측"
+      },
+      {
+        "Year": 2052,
+        "Temp_Anomaly_C": 1.62,
+        "Sea_Level_mm": 184.47,
+        "type": "예측"
+      },
+      {
+        "Year": 2053,
+        "Temp_Anomaly_C": 1.63,
+        "Sea_Level_mm": 188.05,
+        "type": "예측"
+      },
+      {
+        "Year": 2054,
+        "Temp_Anomaly_C": 1.65,
+        "Sea_Level_mm": 191.63,
+        "type": "예측"
+      },
+      {
+        "Year": 2055,
+        "Temp_Anomaly_C": 1.67,
+        "Sea_Level_mm": 195.21,
+        "type": "예측"
+      },
+      {
+        "Year": 2056,
+        "Temp_Anomaly_C": 1.69,
+        "Sea_Level_mm": 198.79,
+        "type": "예측"
+      },
+      {
+        "Year": 2057,
+        "Temp_Anomaly_C": 1.71,
+        "Sea_Level_mm": 202.37,
+        "type": "예측"
+      },
+      {
+        "Year": 2058,
+        "Temp_Anomaly_C": 1.73,
+        "Sea_Level_mm": 205.95,
+        "type": "예측"
+      },
+      {
+        "Year": 2059,
+        "Temp_Anomaly_C": 1.75,
+        "Sea_Level_mm": 209.53,
+        "type": "예측"
+      },
+      {
+        "Year": 2060,
+        "Temp_Anomaly_C": 1.76,
+        "Sea_Level_mm": 213.11,
+        "type": "예측"
+      },
+      {
+        "Year": 2061,
+        "Temp_Anomaly_C": 1.78,
+        "Sea_Level_mm": 216.69,
+        "type": "예측"
+      },
+      {
+        "Year": 2062,
+        "Temp_Anomaly_C": 1.8,
+        "Sea_Level_mm": 220.27,
+        "type": "예측"
+      },
+      {
+        "Year": 2063,
+        "Temp_Anomaly_C": 1.82,
+        "Sea_Level_mm": 223.85,
+        "type": "예측"
+      },
+      {
+        "Year": 2064,
+        "Temp_Anomaly_C": 1.84,
+        "Sea_Level_mm": 227.43,
+        "type": "예측"
+      },
+      {
+        "Year": 2065,
+        "Temp_Anomaly_C": 1.86,
+        "Sea_Level_mm": 231.01,
+        "type": "예측"
+      },
+      {
+        "Year": 2066,
+        "Temp_Anomaly_C": 1.88,
+        "Sea_Level_mm": 234.59,
+        "type": "예측"
+      },
+      {
+        "Year": 2067,
+        "Temp_Anomaly_C": 1.9,
+        "Sea_Level_mm": 238.17,
+        "type": "예측"
+      },
+      {
+        "Year": 2068,
+        "Temp_Anomaly_C": 1.91,
+        "Sea_Level_mm": 241.75,
+        "type": "예측"
+      },
+      {
+        "Year": 2069,
+        "Temp_Anomaly_C": 1.93,
+        "Sea_Level_mm": 245.33,
+        "type": "예측"
+      },
+      {
+        "Year": 2070,
+        "Temp_Anomaly_C": 1.95,
+        "Sea_Level_mm": 248.91,
+        "type": "예측"
+      },
+      {
+        "Year": 2071,
+        "Temp_Anomaly_C": 1.97,
+        "Sea_Level_mm": 252.49,
+        "type": "예측"
+      },
+      {
+        "Year": 2072,
+        "Temp_Anomaly_C": 1.99,
+        "Sea_Level_mm": 256.07,
+        "type": "예측"
+      },
+      {
+        "Year": 2073,
+        "Temp_Anomaly_C": 2.01,
+        "Sea_Level_mm": 259.65,
+        "type": "예측"
+      },
+      {
+        "Year": 2074,
+        "Temp_Anomaly_C": 2.03,
+        "Sea_Level_mm": 263.23,
+        "type": "예측"
+      },
+      {
+        "Year": 2075,
+        "Temp_Anomaly_C": 2.05,
+        "Sea_Level_mm": 266.81,
+        "type": "예측"
+      },
+      {
+        "Year": 2076,
+        "Temp_Anomaly_C": 2.06,
+        "Sea_Level_mm": 270.39,
+        "type": "예측"
+      },
+      {
+        "Year": 2077,
+        "Temp_Anomaly_C": 2.08,
+        "Sea_Level_mm": 273.97,
+        "type": "예측"
+      },
+      {
+        "Year": 2078,
+        "Temp_Anomaly_C": 2.1,
+        "Sea_Level_mm": 277.55,
+        "type": "예측"
+      },
+      {
+        "Year": 2079,
+        "Temp_Anomaly_C": 2.12,
+        "Sea_Level_mm": 281.13,
+        "type": "예측"
+      },
+      {
+        "Year": 2080,
+        "Temp_Anomaly_C": 2.14,
+        "Sea_Level_mm": 284.71,
+        "type": "예측"
+      },
+      {
+        "Year": 2081,
+        "Temp_Anomaly_C": 2.16,
+        "Sea_Level_mm": 288.29,
+        "type": "예측"
+      },
+      {
+        "Year": 2082,
+        "Temp_Anomaly_C": 2.18,
+        "Sea_Level_mm": 291.87,
+        "type": "예측"
+      },
+      {
+        "Year": 2083,
+        "Temp_Anomaly_C": 2.2,
+        "Sea_Level_mm": 295.45,
+        "type": "예측"
+      },
+      {
+        "Year": 2084,
+        "Temp_Anomaly_C": 2.21,
+        "Sea_Level_mm": 299.03,
+        "type": "예측"
+      },
+      {
+        "Year": 2085,
+        "Temp_Anomaly_C": 2.23,
+        "Sea_Level_mm": 302.61,
+        "type": "예측"
+      },
+      {
+        "Year": 2086,
+        "Temp_Anomaly_C": 2.25,
+        "Sea_Level_mm": 306.19,
+        "type": "예측"
+      },
+      {
+        "Year": 2087,
+        "Temp_Anomaly_C": 2.27,
+        "Sea_Level_mm": 309.77,
+        "type": "예측"
+      },
+      {
+        "Year": 2088,
+        "Temp_Anomaly_C": 2.29,
+        "Sea_Level_mm": 313.35,
+        "type": "예측"
+      },
+      {
+        "Year": 2089,
+        "Temp_Anomaly_C": 2.31,
+        "Sea_Level_mm": 316.93,
+        "type": "예측"
+      },
+      {
+        "Year": 2090,
+        "Temp_Anomaly_C": 2.33,
+        "Sea_Level_mm": 320.51,
+        "type": "예측"
+      },
+      {
+        "Year": 2091,
+        "Temp_Anomaly_C": 2.35,
+        "Sea_Level_mm": 324.09,
+        "type": "예측"
+      },
+      {
+        "Year": 2092,
+        "Temp_Anomaly_C": 2.36,
+        "Sea_Level_mm": 327.67,
+        "type": "예측"
+      },
+      {
+        "Year": 2093,
+        "Temp_Anomaly_C": 2.38,
+        "Sea_Level_mm": 331.25,
+        "type": "예측"
+      },
+      {
+        "Year": 2094,
+        "Temp_Anomaly_C": 2.4,
+        "Sea_Level_mm": 334.83,
+        "type": "예측"
+      },
+      {
+        "Year": 2095,
+        "Temp_Anomaly_C": 2.42,
+        "Sea_Level_mm": 338.41,
+        "type": "예측"
+      },
+      {
+        "Year": 2096,
+        "Temp_Anomaly_C": 2.44,
+        "Sea_Level_mm": 341.99,
+        "type": "예측"
+      },
+      {
+        "Year": 2097,
+        "Temp_Anomaly_C": 2.46,
+        "Sea_Level_mm": 345.57,
+        "type": "예측"
+      },
+      {
+        "Year": 2098,
+        "Temp_Anomaly_C": 2.48,
+        "Sea_Level_mm": 349.15,
+        "type": "예측"
+      },
+      {
+        "Year": 2099,
+        "Temp_Anomaly_C": 2.5,
+        "Sea_Level_mm": 352.73,
+        "type": "예측"
+      },
+      {
+        "Year": 2100,
+        "Temp_Anomaly_C": 2.51,
+        "Sea_Level_mm": 356.31,
+        "type": "예측"
+      }
+    ]
+  },
+  "params": [
+    {
+      "name": "year_slider",
+      "value": 1993
+    }
+  ],
+  "transform": [
+    {
+      "calculate": "datum.type == '실측' ? '실측 / Observed' : (datum.type == '예측' ? '예측 / Predicted' : datum.type)",
+      "as": "type_bi"
+    },
+    {
+      "filter": "datum.Year == year_slider"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "circle",
+        "opacity": 1
+      },
+      "encoding": {
+        "size": {
+          "field": "Sea_Level_mm",
+          "type": "quantitative",
+          "legend": null,
+          "scale": {
+            "domain": [
+              -30,
+              400
+            ],
+            "range": [
+              5000,
+              80000
+            ]
+          }
+        },
+        "color": {
+          "field": "Temp_Anomaly_C",
+          "type": "quantitative",
+          "legend": null,
+          "scale": {
+            "domain": [
+              0.2,
+              2.6
+            ],
+            "domainMid": 0.63,
+            "range": [
+              "blue",
+              "red"
+            ]
+          },
+          "condition": [
+            {
+              "test": "datum.Year==2100",
+              "value": "white"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "x": 15,
+        "y": 15,
+        "fontSize": 14,
+        "font": "Source Code Pro",
+        "fill": "white"
+      },
+      "encoding": {
+        "text": {
+          "datum": "Type:"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "x": 75,
+        "y": 15,
+        "fontSize": 14,
+        "font": "Source Code Pro",
+        "fill": "white"
+      },
+      "encoding": {
+        "text": {
+          "field": "type_bi",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "x": 15,
+        "y": 35,
+        "fontSize": 14,
+        "font": "Source Code Pro",
+        "fill": "white"
+      },
+      "encoding": {
+        "text": {
+          "datum": "Year:"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "x": 75,
+        "y": 35,
+        "fontSize": 14,
+        "font": "Source Code Pro",
+        "fill": "white"
+      },
+      "encoding": {
+        "text": {
+          "field": "Year",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "x": 15,
+        "y": 55,
+        "fontSize": 14,
+        "font": "Source Code Pro",
+        "fill": "white"
+      },
+      "encoding": {
+        "text": {
+          "datum": "Temp:"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "x": 75,
+        "y": 55,
+        "fontSize": 14,
+        "font": "Source Code Pro",
+        "fill": "white"
+      },
+      "encoding": {
+        "text": {
+          "field": "Temp_Anomaly_C",
+          "type": "quantitative",
+          "format": ".2f"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "x": 15,
+        "y": 75,
+        "fontSize": 14,
+        "font": "Source Code Pro",
+        "fill": "white"
+      },
+      "encoding": {
+        "text": {
+          "datum": "Sea :"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "x": 75,
+        "y": 75,
+        "fontSize": 14,
+        "font": "Source Code Pro",
+        "fill": "white"
+      },
+      "encoding": {
+        "text": {
+          "field": "Sea_Level_mm",
+          "type": "quantitative",
+          "format": ".2f"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "x": 15,
+        "y": 95,
+        "fontSize": 14,
+        "font": "Source Code Pro",
+        "fill": "yellow"
+      },
+      "encoding": {
+        "text": {
+          "condition": [
+            {
+              "test": "datum.Year == 1998",
+              "value": "1998: 기록적 엘니뇨, 첫 번째 급등 / Record El Niño, first major spike"
+            },
+            {
+              "test": "datum.Year == 2006",
+              "value": "2006: 해수면 상승 가속 시작 / Sea-level acceleration begins"
+            },
+            {
+              "test": "datum.Year == 2016",
+              "value": "2016: 기온 +1.0°C 돌파, '뉴 노멀' 진입 / +1.0°C crossover, 'new normal' begins"
+            },
+            {
+              "test": "datum.Year == 2046",
+              "value": "2046: 기온 이상치 1.5°C 돌파 / +1.5°C threshold crossed"
+            },
+            {
+              "test": "datum.Year == 2057",
+              "value": "2057: 해수면 +200mm 돌파 / +200mm sea-level rise"
+            },
+            {
+              "test": "datum.Year == 2073",
+              "value": "2073: 기온 +2.0°C 돌파 / +2.0°C critical threshold"
+            },
+            {
+              "test": "datum.Year == 2085",
+              "value": "2085: 해수면 +300mm 돌파 / +300mm sea-level rise"
+            },
+            {
+              "test": "datum.Year == 2100",
+              "value": "2100: 파멸적 수준 / Catastrophic scenario"
+            }
+          ],
+          "value": ""
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}
