@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global warming</title>
+    <title>기후 변화 시각화</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
@@ -19,6 +24,11 @@
             transition: background-color 0.1s ease-out;
         }
         body { 
+            position: relative; /* 자식(header)의 위치 기준점 */
+        }
+        main {
+            width: 100%;
+            height: 100%;
             display: flex; 
             flex-direction: column; 
             justify-content: center;
@@ -29,7 +39,7 @@
             max-width: 900px;
         }
         #vis-main-container { height: 400px; margin-bottom: 20px; }
-        #vis-aux-container { height: 250px; } /* 높이 유지 */
+        #vis-aux-container { height: 250px; }
         
         .slider-wrapper {
             margin-top: 10px;
@@ -37,7 +47,7 @@
             max-width: 900px;
             height: 50px;
             position: relative;
-            padding: 0 23px;
+            padding: 0 24px;
             box-sizing: border-box;
         }
         #year-slider-horizontal {
@@ -78,7 +88,7 @@
         #year-display {
             color: white;
             font-size: 1.2em;
-            font-style: italic;
+            font-style: normal;
             position: absolute;
             transform: translateX(-50%);
         }
@@ -86,23 +96,44 @@
             font-family: 'Source Code Pro', monospace !important;
             font-size: 11px !important;
         }
+        .page-title {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            text-align: right;
+            font-size: 14px;
+            color: white;
+            line-height: 1.6;
+            z-index: 10;
+        }
     </style>
 </head>
 <body>
-    <div class="chart-wrapper" id="vis-main-container"></div>
-    <div class="chart-wrapper" id="vis-aux-container"></div>
-    
-    <div class="slider-wrapper">
-        <input type="range" id="year-slider-horizontal" min="1993" max="2100" step="1" value="1993">
-        <div id="year-display-wrapper">
-            <span id="year-display">1993</span>
+    <header class="page-title">
+        과거: 1993-2020 실측 데이터<br>
+        미래: 변화 추세를 학습한 AI의 예측<br>
+        결론: 2100년 파멸 시나리오<br><br>
+        Past: Observed data from 1993-2020<br>
+        Future: AI forecast based on trend analysis<br>
+        Conclusion: A catastrophic scenario in 2100
+    </header>
+
+    <main>
+        <div class="chart-wrapper" id="vis-main-container"></div>
+        <div class="chart-wrapper" id="vis-aux-container"></div>
+        
+        <div class="slider-wrapper">
+            <input type="range" id="year-slider-horizontal" min="1993" max="2100" step="1" value="1993">
+            <div id="year-display-wrapper">
+                <span id="year-display">1993</span>
+            </div>
         </div>
-    </div>
+    </main>
 
     <script>
         const embedOpt = { "mode": "vega-lite", "actions": false };
-        const specCircularUrl = 'chart_main_final_highlight.json';
-        const specLinesUrl = 'chart_aux_final_highlight.json';
+        const specCircularUrl = 'chart_main_final.json';
+        const specLinesUrl = 'chart_aux_final.json';
         let chartData = [];
 
         Promise.all([
@@ -111,7 +142,7 @@
             vegaEmbed('#vis-main-container', specCircularUrl, embedOpt),
             vegaEmbed('#vis-aux-container', specLinesUrl, embedOpt)
         ]).then(([mainSpec, auxSpec, resultCircular, resultLines]) => {
-            chartData = mainSpec.data.values;
+            chartData = mainSpec.data.values; 
             const mainView = resultCircular.view;
             const auxView = resultLines.view;
             const slider = document.getElementById('year-slider-horizontal');
@@ -158,6 +189,7 @@
             
             setTimeout(() => onSliderChange(slider.value), 100);
             window.addEventListener('resize', () => onSliderChange(slider.value));
+
         }).catch(console.error);
     </script>
 </body>
