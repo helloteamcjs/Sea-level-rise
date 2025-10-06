@@ -131,6 +131,7 @@
     </main>
 
     <script>
+        let blinkingInterval = null;
         const embedOpt = { "mode": "vega-lite", "actions": false };
         const specCircularUrl = 'chart_main_final.json';
         const specLinesUrl = 'chart_aux_final.json';
@@ -153,12 +154,34 @@
             
             const onSliderChange = (yearValue) => {
                 const year = parseInt(yearValue);
+                const mainContainer = document.getElementById('vis-main-container');
+if (year === 2100) {
+    if (!blinkingInterval) { // 깜빡임이 꺼져있을 때만 실행
+        blinkingInterval = setInterval(() => {
+            mainContainer.style.opacity = mainContainer.style.opacity === '0' ? '1' : '0';
+        }, 500); // 0.5초 간격으로 깜빡임
+    }
+} else {
+    if (blinkingInterval) { // 깜빡임이 켜져있을 때만 실행
+        clearInterval(blinkingInterval);
+        blinkingInterval = null;
+        mainContainer.style.opacity = '1'; // 다시 보이도록 확실하게 설정
+    }
+}
                 mainView.signal('year_slider', year).run();
                 auxView.signal('selectedYear', year).run();
                 
-                const bgRatio = (year - 1993) / (2100 - 1993);
-                const grayValue = Math.round(26 * (1 - bgRatio));
-                document.body.style.backgroundColor = `rgb(${grayValue}, ${grayValue}, ${grayValue})`;
+                let grayValue;
+if (year <= 2085) {
+    // 1993년부터 2085년까지: 어두운 회색 -> 검은색
+    const bgRatio = (year - 1993) / (2085 - 1993);
+    grayValue = Math.round(26 * (1 - bgRatio));
+} else {
+    // 2085년 이후부터 2100년까지: 검은색 -> 흰색
+    const bgRatio = (year - 2085) / (2100 - 2085);
+    grayValue = Math.round(255 * bgRatio);
+}
+document.body.style.backgroundColor = `rgb(${grayValue}, ${grayValue}, ${grayValue})`;
                 
                 const currentYearData = chartData.find(d => d.Year === year);
                 if (currentYearData) {
@@ -186,10 +209,29 @@
             slider.addEventListener('input', (event) => {
                 onSliderChange(event.target.value);
             });
-            
+                        // 🔹 키보드 화살표로 제어
+            document.addEventListener('keydown', (e) => {
+                if (!slider) return;
+                if (e.key === 'ArrowRight') {
+                    slider.value = Math.min(parseInt(slider.value) + 1, slider.max);
+                    slider.dispatchEvent(new Event('input'));
+                }
+                if (e.key === 'ArrowLeft') {
+                    slider.value = Math.max(parseInt(slider.value) - 1, slider.min);
+                    slider.dispatchEvent(new Event('input'));
+                }
+            });
+            // 🔹 마우스 휠로 제어
+            window.addEventListener('wheel', (e) => {
+                if (!slider) return;
+                e.preventDefault(); // 페이지 스크롤 방지
+                const delta = e.deltaY > 0 ? 1 : -1;
+                slider.value = Math.min(Math.max(parseInt(slider.value) + delta, slider.min), slider.max);
+                slider.dispatchEvent(new Event('input'));
+            }, { passive: false });
+
             setTimeout(() => onSliderChange(slider.value), 100);
             window.addEventListener('resize', () => onSliderChange(slider.value));
-
         }).catch(console.error);
     </script>
 </body>

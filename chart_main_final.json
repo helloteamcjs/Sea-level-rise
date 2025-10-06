@@ -132,58 +132,73 @@
           "field": "Temp_Anomaly_C", "type": "quantitative", "legend": null,
           "scale": {"domain": [0.2, 2.6], "domainMid": 0.63, "range": ["blue", "red"]}
         },
-        "fillOpacity": {
-          "condition": {"test": "datum.Year == 2100", "value": 0},
-          "value": 1
-        },
         "stroke": {"value": "white"},
         "strokeWidth": {
-          "condition": {"test": "datum.Year == 2100", "value": 15},
           "field": "Ice_Proxy",
           "type": "quantitative",
           "scale": {"domain": [0, 2.4], "range": [0, 20]},
           "legend": null
-        },
-        "strokeDash": {
-          "condition": {"test": "datum.Year == 2100", "value": [20, 10]},
-          "value": [0]
         }
       }
     },
     {
-      "mark": {"type": "text", "align": "left", "baseline": "top", "x": 15, "y": 15, "fontSize": 14, "font": "Source Code Pro", "fill": "white"},
-      "encoding": {"text": {"datum": "Type:"}}
-    },
+  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 15, "y": 15, "fontSize": 14, "font": "Source Code Pro"},
+  "encoding": {
+    "text": {"datum": "Type:"},
+    "fill": {"condition": {"test": "datum.Year > 2085", "value": "red"}, "value": "white"}
+  }
+},
+{
+  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 75, "y": 15, "fontSize": 14, "font": "Source Code Pro"},
+  "encoding": {
+    "text": {"field": "type", "type": "nominal"},
+    "fill": {"condition": {"test": "datum.Year > 2085", "value": "red"}, "value": "white"}
+  }
+},
+{
+  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 15, "y": 35, "fontSize": 14, "font": "Source Code Pro"},
+  "encoding": {
+    "text": {"datum": "Year:"},
+    "fill": {"condition": {"test": "datum.Year > 2085", "value": "red"}, "value": "white"}
+  }
+},
+{
+  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 75, "y": 35, "fontSize": 14, "font": "Source Code Pro"},
+  "encoding": {
+    "text": {"field": "Year", "type": "quantitative"},
+    "fill": {"condition": {"test": "datum.Year > 2085", "value": "red"}, "value": "white"}
+  }
+},
+{
+  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 15, "y": 55, "fontSize": 14, "font": "Source Code Pro"},
+  "encoding": {
+    "text": {"datum": "Temp:"},
+    "fill": {"condition": {"test": "datum.Year > 2085", "value": "red"}, "value": "white"}
+  }
+},
+{
+  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 75, "y": 55, "fontSize": 14, "font": "Source Code Pro"},
+  "encoding": {
+    "text": {"field": "Temp_Anomaly_C", "type": "quantitative", "format": ".2f"},
+    "fill": {"condition": {"test": "datum.Year > 2085", "value": "red"}, "value": "white"}
+  }
+},
+{
+  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 15, "y": 75, "fontSize": 14, "font": "Source Code Pro"},
+  "encoding": {
+    "text": {"datum": "Sea :"},
+    "fill": {"condition": {"test": "datum.Year > 2085", "value": "red"}, "value": "white"}
+  }
+},
+{
+  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 75, "y": 75, "fontSize": 14, "font": "Source Code Pro"},
+  "encoding": {
+    "text": {"field": "Sea_Level_mm", "type": "quantitative", "format": ".2f"},
+    "fill": {"condition": {"test": "datum.Year > 2085", "value": "red"}, "value": "white"}
+  }
+},
     {
-      "mark": {"type": "text", "align": "left", "baseline": "top", "x": 75, "y": 15, "fontSize": 14, "font": "Source Code Pro", "fill": "white"},
-      "encoding": {"text": {"field": "type", "type": "nominal"}}
-    },
-    {
-      "mark": {"type": "text", "align": "left", "baseline": "top", "x": 15, "y": 35, "fontSize": 14, "font": "Source Code Pro", "fill": "white"},
-      "encoding": {"text": {"datum": "Year:"}}
-    },
-    {
-      "mark": {"type": "text", "align": "left", "baseline": "top", "x": 75, "y": 35, "fontSize": 14, "font": "Source Code Pro", "fill": "white"},
-      "encoding": {"text": {"field": "Year", "type": "quantitative"}}
-    },
-    {
-      "mark": {"type": "text", "align": "left", "baseline": "top", "x": 15, "y": 55, "fontSize": 14, "font": "Source Code Pro", "fill": "white"},
-      "encoding": {"text": {"datum": "Temp:"}}
-    },
-    {
-      "mark": {"type": "text", "align": "left", "baseline": "top", "x": 75, "y": 55, "fontSize": 14, "font": "Source Code Pro", "fill": "white"},
-      "encoding": {"text": {"field": "Temp_Anomaly_C", "type": "quantitative", "format": ".2f"}}
-    },
-    {
-      "mark": {"type": "text", "align": "left", "baseline": "top", "x": 15, "y": 75, "fontSize": 14, "font": "Source Code Pro", "fill": "white"},
-      "encoding": {"text": {"datum": "Sea :"}}
-    },
-    {
-      "mark": {"type": "text", "align": "left", "baseline": "top", "x": 75, "y": 75, "fontSize": 14, "font": "Source Code Pro", "fill": "white"},
-      "encoding": {"text": {"field": "Sea_Level_mm", "type": "quantitative", "format": ".2f"}}
-    },
-    {
-      "mark": {"type": "text", "align": "left", "baseline": "top", "x": 15, "y": 115, "fontSize": 14, "font": "Source Code Pro", "fill": "yellow"},
+      "mark": {"type": "text", "align": "left", "baseline": "top", "x": 15, "y": 115, "fontSize": 14, "font": "Source Code Pro"},
       "encoding": {
         "text": {
           "condition": [
@@ -196,11 +211,15 @@
             {"test": "datum.Year == 2085", "value": "해수면 +300mm 돌파"},
             {"test": "datum.Year == 2100", "value": "파멸적 수준"}
           ], "value": ""
-        }
+        },
+        "fill": {
+        "condition": {"test": "datum.Year == 2100", "value": "red"},
+        "value": "yellow"
+    }
       }
     },
     {
-      "mark": {"type": "text", "align": "left", "baseline": "top", "x": 15, "y": 135, "fontSize": 14, "font": "Source Code Pro", "fill": "yellow"},
+      "mark": {"type": "text", "align": "left", "baseline": "top", "x": 15, "y": 135, "fontSize": 14, "font": "Source Code Pro"},
       "encoding": {
         "text": {
           "condition": [
@@ -213,7 +232,11 @@
             {"test": "datum.Year == 2085", "value": "+300mm sea-level rise"},
             {"test": "datum.Year == 2100", "value": "Catastrophic scenario"}
           ], "value": ""
-        }
+        },
+        "fill": {
+        "condition": {"test": "datum.Year == 2100", "value": "red"},
+        "value": "yellow"
+    }
       }
     }
   ],
