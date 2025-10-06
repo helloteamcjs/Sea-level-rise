@@ -142,63 +142,63 @@
       }
     },
     {
-  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 15, "y": 15, "fontSize": 14, "font": "Source Code Pro"},
+  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 15, "y": 15, "fontSize": 13, "font": "Source Code Pro"},
   "encoding": {
     "text": {"datum": "Type:"},
     "fill": {"condition": {"test": "datum.Year > 2085", "value": "red"}, "value": "white"}
   }
 },
 {
-  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 75, "y": 15, "fontSize": 14, "font": "Source Code Pro"},
+  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 75, "y": 15, "fontSize": 13, "font": "Source Code Pro"},
   "encoding": {
     "text": {"field": "type", "type": "nominal"},
     "fill": {"condition": {"test": "datum.Year > 2085", "value": "red"}, "value": "white"}
   }
 },
 {
-  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 15, "y": 35, "fontSize": 14, "font": "Source Code Pro"},
+  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 15, "y": 35, "fontSize": 13, "font": "Source Code Pro"},
   "encoding": {
     "text": {"datum": "Year:"},
     "fill": {"condition": {"test": "datum.Year > 2085", "value": "red"}, "value": "white"}
   }
 },
 {
-  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 75, "y": 35, "fontSize": 14, "font": "Source Code Pro"},
+  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 75, "y": 35, "fontSize": 13, "font": "Source Code Pro"},
   "encoding": {
     "text": {"field": "Year", "type": "quantitative"},
     "fill": {"condition": {"test": "datum.Year > 2085", "value": "red"}, "value": "white"}
   }
 },
 {
-  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 15, "y": 55, "fontSize": 14, "font": "Source Code Pro"},
+  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 15, "y": 55, "fontSize": 13, "font": "Source Code Pro"},
   "encoding": {
     "text": {"datum": "Temp:"},
     "fill": {"condition": {"test": "datum.Year > 2085", "value": "red"}, "value": "white"}
   }
 },
 {
-  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 75, "y": 55, "fontSize": 14, "font": "Source Code Pro"},
+  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 75, "y": 55, "fontSize": 13, "font": "Source Code Pro"},
   "encoding": {
     "text": {"field": "Temp_Anomaly_C", "type": "quantitative", "format": ".2f"},
     "fill": {"condition": {"test": "datum.Year > 2085", "value": "red"}, "value": "white"}
   }
 },
 {
-  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 15, "y": 75, "fontSize": 14, "font": "Source Code Pro"},
+  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 15, "y": 75, "fontSize": 13, "font": "Source Code Pro"},
   "encoding": {
     "text": {"datum": "Sea :"},
     "fill": {"condition": {"test": "datum.Year > 2085", "value": "red"}, "value": "white"}
   }
 },
 {
-  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 75, "y": 75, "fontSize": 14, "font": "Source Code Pro"},
+  "mark": {"type": "text", "align": "left", "baseline": "top", "x": 75, "y": 75, "fontSize": 13, "font": "Source Code Pro"},
   "encoding": {
     "text": {"field": "Sea_Level_mm", "type": "quantitative", "format": ".2f"},
     "fill": {"condition": {"test": "datum.Year > 2085", "value": "red"}, "value": "white"}
   }
 },
     {
-      "mark": {"type": "text", "align": "left", "baseline": "top", "x": 15, "y": 115, "fontSize": 14, "font": "Source Code Pro"},
+      "mark": {"type": "text", "align": "left", "baseline": "top", "x": 15, "y": 115, "fontSize": 13, "font": "Source Code Pro"},
       "encoding": {
         "text": {
           "condition": [
